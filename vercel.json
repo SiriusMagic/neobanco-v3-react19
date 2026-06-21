@@ -8,8 +8,7 @@
     "backend": {
       "root": "backend",
       "routePrefix": "/_/backend",
-      "entrypoint": "server.py",
-      "runtime": "python3.12"
+      "entrypoint": "server.py"
     }
   }
 }
