@@ -14,6 +14,7 @@ import Insurance from './pages/Insurance';
 import Profile from './pages/Profile';
 import { Button } from './components/ui/button';
 import { Search, Menu } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -146,6 +147,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <Analytics />
     </Router>
   );
 }
