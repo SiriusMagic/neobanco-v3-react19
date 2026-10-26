@@ -3,10 +3,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { AlertCircle, CheckCircle, Gift } from 'lucide-react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const RedeemDialog = ({ open, onClose, redemption, balance, onSuccess }) => {
   const [loading, setLoading] = useState(false);

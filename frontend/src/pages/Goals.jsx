@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 import GoalCard from '../components/GoalCard';
 import GoalDetailPanel from '../components/GoalDetailPanel';
 import CreateGoalDialog from '../components/CreateGoalDialog';
 import { Button } from '../components/ui/button';
 import { Plus } from 'lucide-react';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const Goals = () => {
   const [goals, setGoals] = useState([]);

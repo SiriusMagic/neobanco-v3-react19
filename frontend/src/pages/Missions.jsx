@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Trophy, Star, Gift, DollarSign, Percent, CheckCircle, ShoppingCart, FileText, Crown, Sparkles } from 'lucide-react';
 import RedeemDialog from '../components/RedeemDialog';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const Missions = () => {
   const [balance, setBalance] = useState(null);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 import { Button } from './ui/button';
 import { Lock, Unlock, Eye, EyeOff, ArrowUpRight, ArrowDownLeft, Copy, Trash2, Shield } from 'lucide-react';
 import { Card } from './ui/card';
@@ -9,8 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const CardDetailPanel = ({ card, onCardUpdate, onReturnFunds, onDestroyCard }) => {
   const [history, setHistory] = useState([]);

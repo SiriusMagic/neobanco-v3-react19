@@ -5,10 +5,9 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { AlertCircle, CheckCircle } from 'lucide-react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const TransferToCardDialog = ({ open, onClose, vault, cards, onSuccess }) => {
   const [selectedCardId, setSelectedCardId] = useState('');
