@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import axios from 'axios';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import axios from '@/lib/localApi';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import Cards from './pages/Cards';
@@ -15,8 +15,7 @@ import Profile from './pages/Profile';
 import { Button } from './components/ui/button';
 import { Search, Menu } from 'lucide-react';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 function App() {
   const [loading, setLoading] = useState(true);

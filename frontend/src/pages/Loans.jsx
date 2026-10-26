@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
@@ -8,8 +8,7 @@ import { Badge } from '../components/ui/badge';
 import { ArrowLeft, DollarSign, Briefcase, Building2, AlertCircle } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '../components/ui/dialog';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const Loans = () => {
   const [view, setView] = useState('menu'); // menu, microcredit, personal, business

@@ -4,11 +4,10 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Tabs, TabsList, TabsTrigger } from './ui/tabs';
 import { Plus, Minus } from 'lucide-react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const GoalDetailPanel = ({ goal, onGoalUpdate }) => {
   const [historyData, setHistoryData] = useState([]);

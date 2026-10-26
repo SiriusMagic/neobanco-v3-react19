@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '@/lib/localApi';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -7,8 +7,7 @@ import { Shield, ArrowDownToLine, Lock, Plus, Eye } from 'lucide-react';
 import CardItem from '../components/CardItem';
 import TransferToCardDialog from '../components/TransferToCardDialog';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = '/api';
 
 const Vault = () => {
   const [vault, setVault] = useState(null);

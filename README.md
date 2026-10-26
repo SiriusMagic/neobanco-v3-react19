@@ -1,7 +1,9 @@
-# Neobanco — Versión 3.338 (Vercel, React 19)
+# Neobanco
 
-Variante de la versión 3 de la **aplicación de banca digital** (prototipo), preparada para **Vercel** y manteniendo **React 19**.
+**Aplicación de banca digital** (prototipo): bóveda de ahorro, tarjetas con su propio historial, tarjetas desechables, metas, préstamos por suscripción, misiones con puntos, seguros y perfil.
 
+> ✅ **Funciona 100 % en el navegador.** No necesita servidor, MongoDB ni Vercel: los datos se guardan en tu navegador (localStorage) y no se pierden al recargar.
+>
 > ⚠️ Es un **prototipo de demostración**. No es un banco real, no mueve dinero real y no está conectado a ninguna red de pagos.
 
 ## Funciones principales
@@ -18,51 +20,52 @@ Variante de la versión 3 de la **aplicación de banca digital** (prototipo), pr
 
 ## Tecnología
 
-- **Frontend**: React + Tailwind CSS + componentes shadcn/ui
-- **Backend**: FastAPI (Python)
-- **Base de datos**: MongoDB
+- **React 19** + **Vite 7**
+- **Tailwind CSS** + componentes **shadcn/ui** (Radix UI) + **Recharts** para gráficos
+- **Servidor simulado en el navegador** (`frontend/src/lib/localApi.js`): reproduce las rutas `/api/...` del antiguo backend FastAPI + MongoDB y guarda los datos en `localStorage`
 
-## ¿Qué cambia en esta versión?
+### ¿Cómo reinicio los datos?
 
-Igual que la versión 3, pero conserva **React 19** y actualiza `react-day-picker` a la v9 para que sea compatible. Incluye `vercel.json` corregido.
+Abre las herramientas del navegador (F12) → Application → Local Storage y borra la clave `neobanco-db-v1`. Al recargar verás el botón **Cargar datos de ejemplo**.
 
-| Repo | Diferencia |
+## Historial de versiones
+
+Este repo es la versión principal y unificada. Las versiones anteriores quedan como historial:
+
+| Repo | Qué tenía |
 |---|---|
-| neobanco-v1 | Módulos base |
+| neobanco-v1 | Módulos base (con backend FastAPI + MongoDB) |
 | neobanco-v2 | + Seguros y Perfil |
 | neobanco-v3-react18 | + despliegue en Vercel, React 18 |
-| neobanco-v3-react19 | + despliegue en Vercel, React 19 |
+| **neobanco-v3-react19** | **Versión actual: 100 % navegador, React 19 + Vite** |
 
-## Cómo ejecutarlo
+## Cómo usarla
 
-Requisitos: **Node.js 20+**, **Yarn**, **Python 3.11+** y **MongoDB** (local o en la nube).
+### Opción 1 — En el navegador, sin instalar nada
 
-**Backend (FastAPI):**
+Si el repo es **público**, se publica sola en **https://siriusmagic.github.io/neobanco-v3-react19/** cada vez que hay un cambio en `main` (actívalo una vez en **Settings → Pages → Source: GitHub Actions**). En un repo privado, GitHub Pages requiere un plan de pago.
 
-```bash
-cd backend
-pip install -r requirements.txt
-# Crea backend/.env con:
-#   MONGO_URL=mongodb://localhost:27017
-#   DB_NAME=nombre_de_tu_base
-uvicorn server:app --reload --port 8001
-```
+### Opción 2 — En tu computadora
 
-**Frontend (React):**
+Requisitos: **Node.js 20 o superior** y **Yarn**.
 
 ```bash
 cd frontend
 yarn install
-# Crea frontend/.env con:
-#   REACT_APP_BACKEND_URL=http://localhost:8001
-yarn start
+yarn dev        # abre http://localhost:3000
 ```
 
-Abre http://localhost:3000 en el navegador. Todas las rutas del backend usan el prefijo `/api`.
+Para generar la versión final: `yarn build` (queda en `frontend/build/`) y `yarn preview` para probarla.
 
-### Desplegar en Vercel
+### Opción 3 — Compartirla desde tu computadora con un túnel
 
-El archivo `vercel.json` sirve el frontend en `/` y el backend en `/_/backend`. Configura `MONGO_URL` y `DB_NAME` en las variables de entorno del proyecto en Vercel.
+Con la app corriendo (`yarn dev`), en otra terminal:
+
+```bash
+npx cloudflared tunnel --url http://localhost:3000
+```
+
+Te dará un enlace `https://….trycloudflare.com` que puedes abrir desde el celular o compartir. Se cierra al detener el comando.
 
 ## Licencia
 
