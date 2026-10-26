@@ -28,10 +28,10 @@ Igual que la versión 3, pero conserva **React 19** y actualiza `react-day-picke
 
 | Repo | Diferencia |
 |---|---|
-| Bank-v1.0 | Módulos base |
-| Bank-v2.0 | + Seguros y Perfil |
-| Bank-v3 | + despliegue en Vercel, React 18 |
-| Bank-v3.338 | + despliegue en Vercel, React 19 |
+| neobanco-v1 | Módulos base |
+| neobanco-v2 | + Seguros y Perfil |
+| neobanco-v3-react18 | + despliegue en Vercel, React 18 |
+| neobanco-v3-react19 | + despliegue en Vercel, React 19 |
 
 ## Cómo ejecutarlo
 
