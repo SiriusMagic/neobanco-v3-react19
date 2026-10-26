@@ -28,10 +28,10 @@ Igual que la versión 3, pero conserva **React 19** y actualiza `react-day-picke
 
 | Repo | Diferencia |
 |---|---|
-| Bank-v1.0 | Módulos base |
-| Bank-v2.0 | + Seguros y Perfil |
-| Bank-v3 | + despliegue en Vercel, React 18 |
-| Bank-v3.338 | + despliegue en Vercel, React 19 |
+| neobanco-v1 | Módulos base |
+| neobanco-v2 | + Seguros y Perfil |
+| neobanco-v3-react18 | + despliegue en Vercel, React 18 |
+| neobanco-v3-react19 | + despliegue en Vercel, React 19 |
 
 ## Cómo ejecutarlo
 
@@ -71,3 +71,7 @@ Copyright 2026 SiriusMagic
 Este proyecto se distribuye bajo la **Licencia Apache 2.0**. Consulta el archivo [`LICENSE`](./LICENSE) para ver el texto completo.
 
 En resumen: cualquiera puede usar, copiar, modificar y distribuir este código, siempre que conserve el aviso de copyright y la licencia. El software se entrega **"tal cual", sin garantías de ningún tipo**, y los autores no se hacen responsables de daños derivados de su uso.
+
+## Seguridad
+
+¿Encontraste una vulnerabilidad? Lee [`SECURITY.md`](./SECURITY.md) y repórtala de forma privada.
