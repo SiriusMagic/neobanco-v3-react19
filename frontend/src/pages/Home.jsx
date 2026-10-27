@@ -86,7 +86,7 @@ const Home = () => {
       </div>
 
       {/* Main Vault Module */}
-      <Card className="p-6 md:p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200" data-testid="vault-module">
+      <Card className="p-6 md:p-8 bg-linear-to-br from-blue-50 to-indigo-50 border-2 border-blue-200" data-testid="vault-module">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -233,12 +233,12 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Insurance Widget */}
         <Card 
-          className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 cursor-pointer hover:shadow-lg transition-shadow"
+          className="p-6 bg-linear-to-br from-purple-50 to-pink-50 border-2 border-purple-200 cursor-pointer hover:shadow-lg transition-shadow"
           onClick={() => navigate('/seguros')}
           data-testid="insurance-widget"
         >
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center shrink-0">
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1">
@@ -260,12 +260,12 @@ const Home = () => {
 
         {/* Missions Widget */}
         <Card 
-          className="p-6 bg-gradient-to-br from-orange-50 to-yellow-50 border-2 border-orange-200 cursor-pointer hover:shadow-lg transition-shadow"
+          className="p-6 bg-linear-to-br from-orange-50 to-yellow-50 border-2 border-orange-200 cursor-pointer hover:shadow-lg transition-shadow"
           onClick={() => navigate('/misiones')}
           data-testid="missions-widget"
         >
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center shrink-0">
               <Target className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1">

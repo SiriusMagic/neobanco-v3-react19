@@ -69,7 +69,7 @@ const Vault = () => {
           Bóveda Segura
         </h2>
         
-        <Card className="p-6 md:p-8 bg-gradient-to-br from-[#0284C7] to-[#0369A1] text-white relative overflow-hidden">
+        <Card className="p-6 md:p-8 bg-linear-to-br from-[#0284C7] to-[#0369A1] text-white relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full transform translate-x-32 -translate-y-32"></div>

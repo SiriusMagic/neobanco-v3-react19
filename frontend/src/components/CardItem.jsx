@@ -20,13 +20,13 @@ const CardItem = ({ card, selected, onClick }) => {
   const getGradientClass = (theme) => {
     switch (theme) {
       case 'turquoise':
-        return 'bg-[linear-gradient(135deg,_#00CED1_0%,_#8EEAD5_60%,_#E5FCFD_100%)]';
+        return 'bg-[linear-gradient(135deg,#00CED1_0%,#8EEAD5_60%,#E5FCFD_100%)]';
       case 'blue':
-        return 'bg-[linear-gradient(135deg,_#0284C7_0%,_#7DD3FC_60%,_#E0F2FE_100%)]';
+        return 'bg-[linear-gradient(135deg,#0284C7_0%,#7DD3FC_60%,#E0F2FE_100%)]';
       case 'green':
-        return 'bg-[linear-gradient(135deg,_#0E9F6E_0%,_#6EE7B7_60%,_#D1FAE5_100%)]';
+        return 'bg-[linear-gradient(135deg,#0E9F6E_0%,#6EE7B7_60%,#D1FAE5_100%)]';
       default:
-        return 'bg-[linear-gradient(135deg,_#00CED1_0%,_#8EEAD5_60%,_#E5FCFD_100%)]';
+        return 'bg-[linear-gradient(135deg,#00CED1_0%,#8EEAD5_60%,#E5FCFD_100%)]';
     }
   };
 

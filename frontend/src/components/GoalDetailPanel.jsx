@@ -215,7 +215,7 @@ const GoalDetailPanel = ({ goal, onGoalUpdate }) => {
                     })}
                   </div>
                 </div>
-                <div className="text-right flex-shrink-0">
+                <div className="text-right shrink-0">
                   <div className={`font-semibold text-xs md:text-sm ${
                     contribution.type === 'deposit' ? 'text-green-600' : 'text-red-600'
                   }`}>

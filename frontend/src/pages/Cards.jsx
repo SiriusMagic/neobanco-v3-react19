@@ -170,7 +170,7 @@ const Cards = () => {
               {/* Create Card Module - Only for disposable */}
               <button
                 onClick={() => setShowCreateDialog(true)}
-                className="flex-shrink-0 w-[280px] sm:w-[320px] h-[180px] snap-center rounded-xl border-2 border-dashed border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all flex flex-col items-center justify-center gap-2 group"
+                className="shrink-0 w-[280px] sm:w-[320px] h-[180px] snap-center rounded-xl border-2 border-dashed border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all flex flex-col items-center justify-center gap-2 group"
                 data-testid="create-card-btn"
               >
                 <div className="w-12 h-12 rounded-full bg-gray-100 group-hover:bg-gray-200 flex items-center justify-center transition-colors">

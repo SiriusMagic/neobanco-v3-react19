@@ -115,7 +115,7 @@ const RedeemDialog = ({ open, onClose, redemption, balance, onSuccess }) => {
             {/* Error Message */}
             {error && (
               <div className="p-3 bg-red-50 border border-red-200 rounded-lg flex items-start gap-2">
-                <AlertCircle size={18} className="text-red-600 flex-shrink-0 mt-0.5" />
+                <AlertCircle size={18} className="text-red-600 shrink-0 mt-0.5" />
                 <p className="text-sm text-red-600">{error}</p>
               </div>
             )}

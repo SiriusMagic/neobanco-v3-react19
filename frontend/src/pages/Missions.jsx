@@ -88,7 +88,7 @@ const Missions = () => {
       </div>
 
       {/* Points Balance */}
-      <Card className="p-6 md:p-8 bg-gradient-to-br from-[#FFD700] via-[#FFA500] to-[#FF8C00] text-white relative overflow-hidden">
+      <Card className="p-6 md:p-8 bg-linear-to-br from-[#FFD700] via-[#FFA500] to-[#FF8C00] text-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 opacity-10">
           <Sparkles className="absolute top-4 right-4 w-16 h-16" />
@@ -125,7 +125,7 @@ const Missions = () => {
             return (
               <Card key={mission.id} className="p-4 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#00CED1]/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#00CED1]/10 flex items-center justify-center shrink-0">
                     <IconComponent size={24} className="text-[#00CED1]" />
                   </div>
                   <div className="flex-1">
@@ -154,7 +154,7 @@ const Missions = () => {
             return (
               <Card key={mission.id} className="p-4 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#E91E63]/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#E91E63]/10 flex items-center justify-center shrink-0">
                     <IconComponent size={24} className="text-[#E91E63]" />
                   </div>
                   <div className="flex-1">

@@ -104,7 +104,7 @@ const Insurance = () => {
 
       {/* Active Insurance Banner */}
       {insurance?.has_insurance && (
-        <Card className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
+        <Card className="p-6 bg-linear-to-br from-green-50 to-emerald-50 border-2 border-green-200">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center">
               <Shield className="w-6 h-6 text-white" />
@@ -131,7 +131,7 @@ const Insurance = () => {
         </h2>
 
         {/* Plan Único de Bóveda - FEATURED */}
-        <Card className="p-6 border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-pink-50" data-testid="vault-plan">
+        <Card className="p-6 border-2 border-purple-300 bg-linear-to-br from-purple-50 to-pink-50" data-testid="vault-plan">
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center">
@@ -155,7 +155,7 @@ const Insurance = () => {
             
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Escenario No Negligente (Robo, Hackeo)</p>
                   <p className="text-sm text-muted-foreground">Cobertura del <span className="font-bold text-green-600">100%</span> del capital perdido</p>
@@ -163,7 +163,7 @@ const Insurance = () => {
               </div>
               
               <div className="flex items-start gap-2">
-                <Check className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                <Check className="w-5 h-5 text-orange-600 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Escenario Negligente (Estafa, Error Propio)</p>
                   <p className="text-sm text-muted-foreground">Cobertura del <span className="font-bold text-orange-600">75%</span> del capital perdido</p>
@@ -171,7 +171,7 @@ const Insurance = () => {
               </div>
               
               <div className="flex items-start gap-2">
-                <FileText className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <FileText className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
                 <div>
                   <p className="font-medium">Proceso de Reclamo Simplificado</p>
                   <p className="text-sm text-muted-foreground">Sube evidencia (correos, capturas) para activar investigación de Feruner</p>

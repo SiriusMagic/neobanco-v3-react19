@@ -67,7 +67,7 @@ const Subscriptions = () => {
         </h1>
         
         {/* Info Banner */}
-        <Card className="p-4 md:p-6 bg-gradient-to-r from-[#00CED1] to-[#0284C7] text-white border-0">
+        <Card className="p-4 md:p-6 bg-linear-to-r from-[#00CED1] to-[#0284C7] text-white border-0">
           <p className="text-sm md:text-base leading-relaxed">
             Cuando pagas subscripciones, tienes acceso a <strong>microcréditos</strong>, sin revisar buró, 
             sin trámites ni rellenar encuestas, ni justificar en qué lo utilizarás.
@@ -125,7 +125,7 @@ const Subscriptions = () => {
               {/* Benefits */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-2">
-                  <Check size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <Check size={20} className="text-green-500 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-medium">Tasa de Interés Mensual</p>
                     <p className="text-lg font-bold text-[#E91E63]">{plan.interest_rate}%</p>
@@ -133,7 +133,7 @@ const Subscriptions = () => {
                 </div>
 
                 <div className="flex items-start gap-2">
-                  <Check size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <Check size={20} className="text-green-500 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-medium">Límite de Préstamo</p>
                     <p className="text-base font-semibold">${plan.loan_limit.toLocaleString()}</p>
@@ -141,7 +141,7 @@ const Subscriptions = () => {
                 </div>
 
                 <div className="flex items-start gap-2">
-                  <Check size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <Check size={20} className="text-green-500 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-medium">Acceso a Créditos Mayores</p>
                     <p className="text-base">
