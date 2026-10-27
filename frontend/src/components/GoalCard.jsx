@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import { Card } from './ui/card';
 import { Progress } from './ui/progress';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from './ui/dropdown-menu';
 import { Button } from './ui/button';
-import { MoreVertical, Trash2, Edit } from 'lucide-react';
+import { MoreVertical, Trash2 } from 'lucide-react';
 
 const GoalCard = ({ goal, selected, onClick, onDelete }) => {
   const progress = goal.target_amount > 0 ? (goal.current_amount / goal.target_amount) * 100 : 0;

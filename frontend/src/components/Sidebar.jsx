@@ -1,8 +1,22 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, CreditCard, Activity, FileText, Settings, Users, Target, Gift, DollarSign, HelpCircle, ChevronLeft, ChevronRight, Repeat, Wallet, TrendingUp, X, Shield } from 'lucide-react';
+import {
+  Home,
+  CreditCard,
+  Settings,
+  Users,
+  Target,
+  Gift,
+  DollarSign,
+  HelpCircle,
+  ChevronLeft,
+  ChevronRight,
+  Wallet,
+  X,
+  Shield,
+} from 'lucide-react';
 import { Button } from './ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from './ui/sheet';
+import { Sheet, SheetContent } from './ui/sheet';
 
 const Sidebar = ({ isMobileOpen, onMobileClose }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -27,7 +41,8 @@ const Sidebar = ({ isMobileOpen, onMobileClose }) => {
     setCollapsed(!collapsed);
   };
 
-  const SidebarContent = ({ isMobile = false }) => (
+  // Función que dibuja el contenido (no un componente anidado, que se recrearía en cada render).
+  const renderContent = (isMobile = false) => (
     <>
       <div className={`p-4 flex items-center ${isMobile ? 'justify-between' : 'justify-between'}`}>
         {(!collapsed || isMobile) && (
@@ -102,14 +117,14 @@ const Sidebar = ({ isMobileOpen, onMobileClose }) => {
         }`} 
         data-testid="sidebar"
       >
-        <SidebarContent />
+        {renderContent()}
       </aside>
 
       {/* Mobile Drawer */}
       <Sheet open={isMobileOpen} onOpenChange={onMobileClose}>
         <SheetContent side="left" className="w-[280px] p-0 bg-[#FFD700] border-r border-[#E5E7EB]">
           <div className="flex flex-col h-full" data-testid="mobile-sidebar">
-            <SidebarContent isMobile={true} />
+            {renderContent(true)}
           </div>
         </SheetContent>
       </Sheet>

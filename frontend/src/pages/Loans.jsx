@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from '@/lib/localApi';
+import { toast } from '../components/ui/sonner';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Badge } from '../components/ui/badge';
 import { ArrowLeft, DollarSign, Briefcase, Building2, AlertCircle } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '../components/ui/dialog';
 
 const API = '/api';
 
@@ -20,8 +20,6 @@ const Loans = () => {
   const [customAmount, setCustomAmount] = useState('');
   const [cedula, setCedula] = useState('');
   const [error, setError] = useState('');
-  const [successDialog, setSuccessDialog] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -47,18 +45,17 @@ const Loans = () => {
   const handleLoanRequest = async (loanType, amount) => {
     try {
       setError('');
-      const response = await axios.post(`${API}/loans`, {
+      await axios.post(`${API}/loans`, {
         loan_type: loanType,
         amount: amount,
         cedula: loanType === 'personal' ? cedula : null
       });
       
-      setSuccessMessage(
+      toast.success(
         loanType === 'microcredit' 
           ? `¡Microcrédito aprobado! $${amount} estará disponible en tu cuenta.`
           : 'Solicitud enviada. Te contactaremos pronto.'
       );
-      setSuccessDialog(true);
       await fetchData();
       setView('menu');
       setSelectedAmount(null);

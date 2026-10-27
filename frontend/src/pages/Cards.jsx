@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from '@/lib/localApi';
 import CardItem from '../components/CardItem';
 import CardDetailPanel from '../components/CardDetailPanel';
@@ -80,7 +80,7 @@ const Cards = () => {
 
     setCreating(true);
     try {
-      const response = await axios.post(`${API}/cards/create-disposable`, {
+      await axios.post(`${API}/cards/create-disposable`, {
         brand: formData.brand,
         amount: parseFloat(formData.amount),
         holder_name: formData.holder_name || 'USUARIO AIRA',

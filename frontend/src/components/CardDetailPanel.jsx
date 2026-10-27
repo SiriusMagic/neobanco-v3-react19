@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from '@/lib/localApi';
 import { Button } from './ui/button';
 import { Lock, Unlock, Eye, EyeOff, ArrowUpRight, ArrowDownLeft, Copy, Trash2, Shield } from 'lucide-react';
@@ -68,7 +68,7 @@ const CardDetailPanel = ({ card, onCardUpdate, onReturnFunds, onDestroyCard }) =
       setSendAmount('');
       // Refresh card data
       onCardUpdate({ ...card, balance: card.balance - parseFloat(sendAmount) });
-    } catch (error) {
+    } catch {
       toast.error('Error al enviar dinero');
     }
   };
@@ -84,7 +84,7 @@ const CardDetailPanel = ({ card, onCardUpdate, onReturnFunds, onDestroyCard }) =
       setShowReceiveDialog(false);
       setReceiveAmount('');
       onCardUpdate({ ...card, balance: card.balance + parseFloat(receiveAmount) });
-    } catch (error) {
+    } catch {
       toast.error('Error al recibir dinero');
     }
   };
