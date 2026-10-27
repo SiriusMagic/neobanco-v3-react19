@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import { Suspense, lazy, useState, useEffect } from 'react';
 import './App.css';
 import axios from '@/lib/localApi';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
-import Cards from './pages/Cards';
-import Goals from './pages/Goals';
-import Subscriptions from './pages/Subscriptions';
-import Loans from './pages/Loans';
-import Vault from './pages/Vault';
-import Missions from './pages/Missions';
-import Insurance from './pages/Insurance';
-import Profile from './pages/Profile';
 import { Button } from './components/ui/button';
 import { Search, Menu } from 'lucide-react';
+
+// Cada página se descarga solo cuando se visita (carga inicial más rápida).
+const Home = lazy(() => import('./pages/Home'));
+const Cards = lazy(() => import('./pages/Cards'));
+const Goals = lazy(() => import('./pages/Goals'));
+const Subscriptions = lazy(() => import('./pages/Subscriptions'));
+const Loans = lazy(() => import('./pages/Loans'));
+const Vault = lazy(() => import('./pages/Vault'));
+const Missions = lazy(() => import('./pages/Missions'));
+const Insurance = lazy(() => import('./pages/Insurance'));
+const Profile = lazy(() => import('./pages/Profile'));
 
 const API = '/api';
 
@@ -130,6 +132,7 @@ function App() {
           </header>
 
           {/* Content */}
+          <Suspense fallback={<p className="p-6 text-muted-foreground">Cargando…</p>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/caja-fuerte" element={<Vault />} />
@@ -143,6 +146,7 @@ function App() {
             <Route path="/ajustes" element={<Profile />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          </Suspense>
         </main>
       </div>
     </Router>

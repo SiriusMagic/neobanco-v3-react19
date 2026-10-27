@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from '@/lib/localApi';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -55,7 +55,7 @@ const Profile = () => {
       await axios.patch(`${API}/profile`, { [field]: value });
       toast.success('Perfil actualizado');
       fetchProfileData();
-    } catch (error) {
+    } catch {
       toast.error('Error al actualizar perfil');
     }
   };
@@ -65,7 +65,7 @@ const Profile = () => {
       await axios.post(`${API}/profile/toggle-2fa`);
       toast.success(profile.two_factor_enabled ? '2FA desactivado' : '2FA activado');
       fetchProfileData();
-    } catch (error) {
+    } catch {
       toast.error('Error al cambiar 2FA');
     }
   };
@@ -75,7 +75,7 @@ const Profile = () => {
       await axios.delete(`${API}/profile/devices/${deviceId}`);
       toast.success('Dispositivo revocado');
       fetchProfileData();
-    } catch (error) {
+    } catch {
       toast.error('Error al revocar dispositivo');
     }
   };
@@ -86,7 +86,7 @@ const Profile = () => {
       setSettings(newSettings);
       await axios.patch(`${API}/profile/settings`, newSettings);
       toast.success('Configuración actualizada');
-    } catch (error) {
+    } catch {
       toast.error('Error al actualizar configuración');
     }
   };

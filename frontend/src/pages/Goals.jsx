@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from '@/lib/localApi';
 import GoalCard from '../components/GoalCard';
 import GoalDetailPanel from '../components/GoalDetailPanel';
