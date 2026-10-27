@@ -28,6 +28,16 @@
 
 Abre las herramientas del navegador (F12) → Application → Local Storage y borra la clave `neobanco-db-v1`. Al recargar verás el botón **Cargar datos de ejemplo**.
 
+## Pruebas
+
+```bash
+cd frontend
+yarn test       # 14 pruebas de la lógica: transferencias, tarjetas desechables, metas, préstamos, puntos, seguros y perfil
+yarn test:e2e   # abre la app en Chromium, carga datos de ejemplo y recorre las 9 páginas sin errores
+```
+
+GitHub las ejecuta en cada cambio (`.github/workflows/pruebas.yml`). Las actualizaciones menores de Dependabot se fusionan solas cuando las pruebas pasan.
+
 ## Historial de versiones
 
 Este repo es la versión principal y unificada. Las versiones anteriores quedan como historial:
