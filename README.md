@@ -20,8 +20,8 @@
 
 ## Tecnología
 
-- **React 19** + **Vite 7**
-- **Tailwind CSS** + componentes **shadcn/ui** (Radix UI) + **Recharts** para gráficos
+- **React 19** + **Vite 8**
+- **Tailwind CSS 4** + componentes **shadcn/ui** (Radix UI) + **Recharts** para gráficos
 - **Servidor simulado en el navegador** (`frontend/src/lib/localApi.js`): reproduce las rutas `/api/...` del antiguo backend FastAPI + MongoDB y guarda los datos en `localStorage`
 
 ### ¿Cómo reinicio los datos?

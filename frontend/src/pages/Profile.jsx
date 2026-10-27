@@ -318,19 +318,19 @@ const Profile = () => {
                 <Label className="mb-2 block">Método de Alerta</Label>
                 <div className="grid grid-cols-3 gap-2">
                   <Button
-                    variant={settings.notificationMethod === 'push' ? 'default' : 'outline'}
+                    variant={settings.notificationMethod === 'push' ? 'default' : 'outline-solid'}
                     onClick={() => handleUpdateSettings('notificationMethod', 'push')}
                   >
                     Push
                   </Button>
                   <Button
-                    variant={settings.notificationMethod === 'email' ? 'default' : 'outline'}
+                    variant={settings.notificationMethod === 'email' ? 'default' : 'outline-solid'}
                     onClick={() => handleUpdateSettings('notificationMethod', 'email')}
                   >
                     Email
                   </Button>
                   <Button
-                    variant={settings.notificationMethod === 'sms' ? 'default' : 'outline'}
+                    variant={settings.notificationMethod === 'sms' ? 'default' : 'outline-solid'}
                     onClick={() => handleUpdateSettings('notificationMethod', 'sms')}
                   >
                     SMS

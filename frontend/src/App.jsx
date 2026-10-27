@@ -117,7 +117,7 @@ function App() {
                   <input
                     type="text"
                     placeholder="Escoger diseños"
-                    className="bg-transparent border-0 outline-none w-full text-sm"
+                    className="bg-transparent border-0 outline-hidden w-full text-sm"
                   />
                 </div>
               </div>

@@ -75,14 +75,14 @@ const Sidebar = ({ isMobileOpen, onMobileClose }) => {
               data-testid={`nav-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
               title={collapsed && !isMobile ? item.label : ''}
             >
-              <item.icon size={18} className="flex-shrink-0" />
+              <item.icon size={18} className="shrink-0" />
               {(!collapsed || isMobile) && <span className="truncate text-xs">{item.label}</span>}
             </button>
           );
         })}
       </nav>
 
-      <div className={`px-4 py-3 border-t border-black/10 flex-shrink-0 ${collapsed && !isMobile ? 'text-center' : ''}`} data-testid="sidebar-version">
+      <div className={`px-4 py-3 border-t border-black/10 shrink-0 ${collapsed && !isMobile ? 'text-center' : ''}`} data-testid="sidebar-version">
         <p className={`text-xs text-[#111827]/60 font-medium ${collapsed && !isMobile ? 'transform rotate-90 origin-center whitespace-nowrap' : ''}`}>
           {collapsed && !isMobile ? 'v1.5.1' : 'Versión 1.5.1'}
         </p>

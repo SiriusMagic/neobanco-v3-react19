@@ -115,7 +115,7 @@ const Loans = () => {
         </div>
 
         {/* Current Plan Display */}
-        <Card className="p-4 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-white">
+        <Card className="p-4 bg-linear-to-r from-[#FFD700] to-[#FFA500] text-white">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm opacity-90">Plan Activo</p>
@@ -268,7 +268,7 @@ const Loans = () => {
             {predefinedAmounts.map((amount) => (
               <Button
                 key={amount}
-                variant={selectedAmount === amount ? 'default' : 'outline'}
+                variant={selectedAmount === amount ? 'default' : 'outline-solid'}
                 onClick={() => {
                   setSelectedAmount(amount);
                   setCustomAmount('');
